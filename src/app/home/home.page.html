@@ -1,0 +1,25 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title> Home ({{hideScreen}}) </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="main-content">
+  <div class="unlock-app ion-text-center" *ngIf="canUnlock" (click)="unlock()">
+    <ion-icon name="lock-open-outline"></ion-icon>
+    <div>Unlock</div>
+  </div>
+</ion-content>
+
+<ion-footer *ngIf="!canUnlock">
+  <ion-toolbar>
+    <ion-button *ngIf="!hasSession" id="signin-button" expand="full" (click)="signIn()"
+      >Sign In
+      <ion-icon slot="end" name="log-in-outline"></ion-icon>
+    </ion-button>
+    <ion-button *ngIf="hasSession" id="signout-button" expand="full" (click)="signOut()"
+      >Sign Out
+      <ion-icon slot="end" name="log-in-outline"></ion-icon>
+    </ion-button>
+  </ion-toolbar>
+</ion-footer>
