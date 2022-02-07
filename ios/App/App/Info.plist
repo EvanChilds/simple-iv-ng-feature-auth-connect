@@ -23,7 +23,7 @@
 		<dict>
 			<key>CFBundleURLSchemes</key>
 			<array>
-				<string>msauth</string>
+				<string>org.intermountain.pde.mobile</string>
 			</array>
 		</dict>
 	</array>

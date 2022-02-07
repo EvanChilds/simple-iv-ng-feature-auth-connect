@@ -10,18 +10,33 @@ const baseConfig = {
 };
 
 export const mobileAuthConfig: IonicAuthOptions = {
-  ...baseConfig,
-  redirectUri: 'msauth://login',
-  logoutUrl: 'msauth://login',
-  platform: 'cordova',
+  authConfig: 'ping',
+  clientID: 'pde_provider_mobile',
+  clientSecret: 'FAKE_CLIENT_SECRET',
+  discoveryUrl: 'https://fssocaregivertst.intermountain.net/.well-known/openid-configuration',
+  scope: 'openid profile',
+  redirectUri: 'org.intermountain.pde.mobile://callback',
+  logoutUrl: 'org.intermountain.pde.mobile://logout',
+  platform: 'capacitor',
   iosWebView: 'private',
+  webAuthFlow: 'PKCE',
+  logLevel: 'DEBUG',
+  androidToolbarColor: '#3388DD',
 };
 
 export const webAuthConfig: IonicAuthOptions = {
-  ...baseConfig,
+  authConfig: 'ping',
+  clientID: 'pde_provider_web',
+  clientSecret: 'FAKE_CLIENT_SECRET',
+  discoveryUrl: 'https://fssocaregivertst.intermountain.net/.well-known/openid-configuration',
+  scope: 'openid profile',
   redirectUri: 'http://localhost:8100/login',
-  logoutUrl: 'http://localhost:8100/login',
+  logoutUrl: 'http://localhost:8100/logout',
   platform: 'web',
+  iosWebView: 'private',
+  webAuthFlow: 'PKCE',
+  logLevel: 'DEBUG',
+  androidToolbarColor: '#3388DD',
 };
 
 export const environment = {

@@ -23,7 +23,7 @@
             </intent-filter>
 
             <intent-filter>
-                <data android:scheme="msauth" />
+                <data android:scheme="org.intermountain.pde.mobile" />
                 <action android:name="android.intent.action.VIEW" />
                 <category android:name="android.intent.category.DEFAULT" />
                 <category android:name="android.intent.category.BROWSABLE" />
